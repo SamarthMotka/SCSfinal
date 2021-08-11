@@ -521,11 +521,11 @@ footer{
 }
 }
     
-@media only screen and (max-width: 876px){
+/* @media only screen and (max-width: 876px){
     .intro{
-        height: 105vh;
+        height: 125vh;
     }
-}
+} */
 @media only screen and (max-width: 520px){
     .intro{
         height: 125vh;
@@ -562,31 +562,59 @@ footer{
     font-size: 4vh;
     color: #263170;
 }
-@media only screen and (max-width: 400px){
+@media only screen and (min-width: 200px){
     .intro{
-        height: 175vh;
+        height: 270vh ;
     }
 }
-@media only screen and (max-width: 382px){
+@media only screen and (min-width: 300px){
     .intro{
-        height: 175vh ;
+        height: 271vh;
     }
 }
-@media only screen and (max-width: 328px){
+@media only screen and (min-width: 360px){
     .intro{
-        height: 175vh;
+        height: 219vh;
     }
 }
-@media only screen and (max-width: 828px){
+@media only screen and (min-width: 400px){
     .intro{
-        height: 185vh;
+        height: 200vh;
     }
 }
-@media only screen and (min-width: 732px){
+@media only screen and (min-width: 480px){
     .intro{
         height: 160vh;
     }
 }
+@media only screen and (min-width: 538px){
+    .intro{
+        height: 135vh;
+    }
+}
+@media only screen and (min-width: 732px){
+    .intro{
+        height: 125vh;
+    }
+}
+@media only screen and (min-width: 828px){
+    .intro{
+        height: 125vh;
+    }
+}
+@media only screen and (min-width: 1000px){
+    .intro{
+    background-color: white;
+    height: 125vh;
+    margin-top: 0;
+    background-image: url('2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    }
+}
+
 .qualities h3{
     text-align: center;
     color: #121d5c;
