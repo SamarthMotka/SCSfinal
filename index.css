@@ -579,12 +579,12 @@ footer{
 }
 @media only screen and (max-width: 828px){
     .intro{
-        height: 185vh;
+        height: 181vh;
     }
 }
 @media only screen and (min-width: 732px){
     .intro{
-        height: 160vh;
+        height: 140vh;
     }
 }
 .qualities h3{
