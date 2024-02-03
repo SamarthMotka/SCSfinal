@@ -76,36 +76,36 @@
     <div class="container1">
         <div class="title" id="getintouch">Get in touch!</div>
         <div class="content">
-            <form action="#">
+            <form action="#" onsubmit=" sendEmail2(); reset(); return false">
                 <div class="user-details">
                   <div class="input-box">
                     <span class="details">First Name</span>
-                    <input type="text" placeholder="Enter your first name" name="firstName" required>
+                    <input type="text" id="firstName" placeholder="Enter your first name" name="firstName" required>
                 </div>
                 <div class="input-box">
                   <span class="details">Last Name</span>
-                  <input type="text" placeholder="Enter your last name" name="lastName" required>
+                  <input type="text" id="lastName" placeholder="Enter your last name" name="lastName" required>
               </div>
                     <div class="input-box">
                         <span class="details">Email</span>
-                        <input type="email" placeholder="Enter your email" name="Email" required>
+                        <input type="email" id="email" placeholder="Enter your email" name="Email" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Phone Number</span>
-                        <input id="phone" type="tel" name="phone" />
+                        <input id="phone" itemid="phone" type="tel" name="phone" />
                     </div>
                     <div class="input-box">
                         <span class="details">Address</span>
-                        <input type="text" placeholder="Enter Your Address" name="Address" required>
+                        <input type="text" id="address" placeholder="Enter Your Address" name="Address" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Organization Name (if any)</span>
-                        <input type="text" placeholder="Enter your Organization Name." name="Organization">
+                        <input type="text" id ='orgName'placeholder="Enter your Organization Name." name="Organization">
                     </div>
                     <div class="input-box">
                         <span class="details">Mention Your Requirements</span>
                         <!-- <input type="text" placeholder="Enter you Requirements" required> -->
-                        <textarea class="req" name="Requirements" rows="5" cols="40"
+                        <textarea class="req" id="requirements" name="Requirements" rows="5" cols="40"
                         required></textarea>
                     </div>
 
@@ -211,7 +211,7 @@
         <!-- Copyright -->
       </footer>
       
-      
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-menu");
@@ -231,12 +231,48 @@
     navMenu.classList.remove("active");
     }
     </script>
+     <script src="https://smtpjs.com/v3/smtp.js"></script>
      <script>
       const phoneInputField = document.querySelector("#phone");
       const phoneInput = window.intlTelInput(phoneInputField, {
         utilsScript:
           "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
       });
+      function sendEmail2(){   
+        console.log('function called') 
+      Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "tejdoshi5@gmail.com",
+    Password : "2847F7D42C58128C3EA83D6268100DD8FC1E",
+    To : 'info@sievecs.com',
+    From : "tejdoshi5@gmail.com",
+    Subject : `You have received a new Entry`,
+    Body : " First Name: " + document.getElementById("firstName").value
+    + "<br> Email: " + document.getElementById('email').value
+    + "<br> Phone: " + document.getElementById('phone').value
+    + "<br> Requirements:  " + document.getElementById('requirements').value
+    + "<br> Organization Name: " + document.getElementById('orgName').value
+    + '<br>  Address: ' + document.getElementById('address').value
+})
+// .then(
+//   message => {
+ 
+//     if(message == 'OK'){
+//       Swal.fire({
+//   title: "Your Query has been received successfully!",
+//   text: "Our team will reach out to you soon!",
+//   icon: "success"
+
+// });
+//     }
+//   }
+// );
+ }
+
+
+
+
+
     </script>
     
 </body>
