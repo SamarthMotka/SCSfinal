@@ -246,7 +246,7 @@
     Password : "2847F7D42C58128C3EA83D6268100DD8FC1E",
     To : 'info@sievecs.com',
     From : "tejdoshi5@gmail.com",
-    Subject : `You have received a new Entry`,
+    Subject : `You have received a new Entry from ${document.getElementById('firstName').value}`,
     Body : " First Name: " + document.getElementById("firstName").value
     + "<br> Email: " + document.getElementById('email').value
     + "<br> Phone: " + document.getElementById('phone').value
@@ -254,19 +254,19 @@
     + "<br> Organization Name: " + document.getElementById('orgName').value
     + '<br>  Address: ' + document.getElementById('address').value
 })
-// .then(
-//   message => {
+.then(
+  message => {
  
-//     if(message == 'OK'){
-//       Swal.fire({
-//   title: "Your Query has been received successfully!",
-//   text: "Our team will reach out to you soon!",
-//   icon: "success"
+    if(message == 'OK'){
+      Swal.fire({
+  title: "Your Query has been received successfully!",
+  text: "Our team will reach out to you soon!",
+  icon: "success"
 
-// });
-//     }
-//   }
-// );
+});
+    }
+  }
+);
  }
 
 
