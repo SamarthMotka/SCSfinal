@@ -2,9 +2,9 @@
 *{
   margin:0;
   padding:0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   /* box-sizing: border-box; */
-  font-family: 'Raleway', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
 }/* Flipping cards */
@@ -204,7 +204,7 @@ a {
     display: block;
         margin: 0;
         line-height: 1em;
-        font-family: Helvetica, Arial, sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-weight: bold;
         font-size: 4rem;
         background: linear-gradient(to right, #263170 50%, #263170 20%);
@@ -310,7 +310,7 @@ a {
         display: block;
             margin: 0;
             line-height: 1em;
-            font-family: 'Oswald', sans-serif;
+            font-family: "Space Grotesk", sans-serif;
             font-weight: bold;
             font-size: 3rem;
             background: linear-gradient(to right, #263170 50%, #263170 20%);
